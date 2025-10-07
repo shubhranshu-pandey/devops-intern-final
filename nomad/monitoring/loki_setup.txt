@@ -1,0 +1,14 @@
+Loki Monitoring Setup:
+
+1. Started Loki:
+   docker run -d --name loki -p 3100:3100 grafana/loki:2.8.0
+
+2. Optional Grafana for visualization:
+   docker run -d --name grafana -p 3000:3000 grafana/grafana:10.0.0
+   - Add Loki as data source: http://localhost:3100
+
+3. View container logs:
+   docker logs hello-devops
+   - Or forward logs using Promtail (config in promtail-config.yaml)
+
+4. Check logs in Grafana or via CLI.
