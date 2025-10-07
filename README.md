@@ -84,9 +84,7 @@ Workflow file: .github/workflows/ci.yml
 
 Runs automatically on every push to main.
 
-CI/CD badge:
-
-![CI](https://github.com/shubhranshu-pandey/devops-intern-final/actions/workflows/ci.yml/badge.svg)
+CI/CD badge: ![CI](https://github.com/shubhranshu-pandey/devops-intern-final/actions/workflows/ci.yml/badge.svg)
 
 	•	Automatically executes hello.py in a clean environment.
 
