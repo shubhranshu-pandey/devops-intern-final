@@ -1,3 +1,5 @@
+![CI](https://github.com/shubhranshu-pandey/devops-intern-final/actions/workflows/ci.yml/badge.svg)
+
 # DevOps Internship Final Project
 
 **Name:** Shubhranshu Pandey  
@@ -60,9 +62,7 @@ docker run --rm hello-devops
 4. CI/CD with GitHub Actions
 	•	Workflow file: .github/workflows/ci.yml
 	•	Runs automatically on every push to main.
-	•	CI/CD badge:
-
-![CI](https://github.com/shubhranshu-pandey/devops-intern-final/actions/workflows/ci.yml/badge.svg)
+	•	CI/CD badge: At the top.
 
 	•	Automatically executes hello.py in a clean environment.
 
