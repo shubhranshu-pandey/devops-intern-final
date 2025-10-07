@@ -12,3 +12,4 @@ Loki Monitoring Setup:
    - Or forward logs using Promtail (config in promtail-config.yaml)
 
 4. Check logs in Grafana or via CLI.
+
