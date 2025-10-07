@@ -1,113 +1,90 @@
 # DevOps Internship Final Project
 
 **Name:** Shubhranshu Pandey  
-**Date:** 07-Oct-2025  
+**Date:** 07-Oct-2025
 
 ---
 
 ## Project Overview
-This project demonstrates a DevOps workflow using open-source tools, including:
 
-- Linux scripting  
-- Docker containerization  
-- CI/CD with GitHub Actions  
-- Nomad job deployment  
-- Monitoring with Grafana Loki  
+This project demonstrates a small but realistic **DevOps workflow** using open-source tools. The workflow includes:
 
-Each step builds on the previous, simulating a realistic DevOps pipeline.
+- Linux scripting basics
+- Docker containerization
+- CI/CD with GitHub Actions
+- Nomad job deployment
+- Monitoring with Grafana Loki
 
----
-
-## Repository Structure
-
-devops-intern-final/
-├─ README.md
-├─ hello.py
-├─ Dockerfile
-├─ scripts/
-│   └─ sysinfo.sh
-├─ .github/workflows/
-│   └─ ci.yml
-├─ nomad/
-│   └─ hello.nomad
-└─ monitoring/
-└─ loki_setup.txt
+Each step produces real output for the next, simulating a complete DevOps pipeline.
 
 ---
 
-## Step 1: Git & GitHub Setup
-Clone the repository:
+## Step-by-Step Instructions
+
+### 1. Git & GitHub Setup
+
+Clone the repository and view the sample script:
+
 ```bash
 git clone https://github.com/shubhranshu-pandey/devops-intern-final.git
 cd devops-intern-final
+python hello.py
 
-hello.py script:
-
-print("Hello, DevOps!")
-
-Commit and push to GitHub to initialize the repo.
+	•	Output: Hello, DevOps!
 
 ⸻
 
-Step 2: Linux & Scripting Basics
+2. Linux Scripting
 
-Navigate to scripts folder and run system info:
+Run the system info script:
 
 cd scripts
 chmod +x sysinfo.sh
 ./sysinfo.sh
 
-Output:
-	•	Current user (whoami)
-	•	Current date (date)
-	•	Disk usage (df -h)
+	•	Displays current user, date, and disk usage.
 
 ⸻
 
-Step 3: Docker Basics
+3. Docker Containerization
 
-Build and run Docker container:
+Build and run the Docker container:
 
 docker build -t hello-devops .
 docker run --rm hello-devops
 
-Output:
-
-Hello, DevOps!
-
+	•	Output: Hello, DevOps!
 
 ⸻
 
-Step 4: CI/CD with GitHub Actions
+4. CI/CD with GitHub Actions
+	•	Workflow file: .github/workflows/ci.yml
+	•	Runs automatically on every push to main.
+	•	CI/CD badge:
 
-Workflow file: .github/workflows/ci.yml
-
-Runs automatically on every push to main.
-
-CI/CD badge: ![CI](https://github.com/shubhranshu-pandey/devops-intern-final/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/shubhranshu-pandey/devops-intern-final/actions/workflows/ci.yml/badge.svg)
 
 	•	Automatically executes hello.py in a clean environment.
 
 ⸻
 
-Step 5: Job Deployment with Nomad
+5. Nomad Job Deployment
 
-Navigate to Nomad folder and run job:
+Deploy the Docker container using Nomad:
 
 cd nomad
 nomad job run hello.nomad
 
-	•	Deploys Docker container as a Nomad service
-	•	Allocates minimal CPU and memory
+	•	Deploys the container as a service with minimal CPU and memory.
 
 ⸻
 
-Step 6: Monitoring with Grafana Loki
-	1.	Start Loki using Docker:
+6. Monitoring with Grafana Loki
+	1.	Start Loki:
 
 docker run -d --name loki -p 3100:3100 grafana/loki:2.8.0
 
-	2.	(Optional) Run Grafana for visualization:
+	2.	(Optional) Run Grafana:
 
 docker run -d --name grafana -p 3000:3000 grafana/grafana:10.0.0
 
@@ -119,5 +96,8 @@ docker run -d --name grafana -p 3000:3000 grafana/grafana:10.0.0
 
 docker logs hello-devops
 
-	•	Query logs in Grafana: {job="docker"}
-	•	Full instructions documented in monitoring/loki_setup.txt
+	•	Query in Grafana: {job="docker"}
+	•	Full setup instructions in monitoring/loki_setup.txt
+
+⸻
+```
