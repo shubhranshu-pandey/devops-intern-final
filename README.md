@@ -1,3 +1,6 @@
+![CI](https://github.com/shubhranshu-pandey/devops-intern-final/actions/workflows/ci.yml/badge.svg)
+
+
 # DevOps Internship Final Project
 Name: Shubhranshu Pandey  
 Date: 07-Oct-2025  
